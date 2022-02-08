@@ -6,36 +6,26 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.UIManager;
+import java.awt.Toolkit;
 
-public class testwindow extends JFrame {
+public class LogWindow extends JFrame {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					testwindow frame = new testwindow();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	/*public static void main(String[] args) 
+	{
+
+	}*/
 
 	/**
 	 * Create the frame.
 	 */
-	public testwindow() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public LogWindow() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(LogWindow.class.getResource("/kotapplication/log.png")));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

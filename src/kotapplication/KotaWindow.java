@@ -62,11 +62,6 @@ public class KotaWindow extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setBounds(43, 16, 69, 73);
-		lblNewLabel.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/tools.png")));
-		contentPane.add(lblNewLabel);
-		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setBounds(191, 35, 69, 54);
 		lblNewLabel_1.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/powershell.png")));
@@ -98,7 +93,7 @@ public class KotaWindow extends JFrame {
 				});
 			}
 		});
-		btnNewButton.setBounds(43, 93, 59, 28);
+		btnNewButton.setBounds(53, 93, 59, 28);
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Scripts");
@@ -235,6 +230,11 @@ public class KotaWindow extends JFrame {
 		});
 		btnNewButton_3.setBounds(333, 206, 76, 28);
 		contentPane.add(btnNewButton_3);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/tools.png")));
+		lblNewLabel.setBounds(53, 21, 69, 68);
+		contentPane.add(lblNewLabel);
 	}
 
 }

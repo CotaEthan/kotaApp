@@ -25,7 +25,7 @@ public class SyncroWindow extends JFrame {
 	 * Create the frame.
 	 */
 	public SyncroWindow() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(SyncroWindow.class.getResource("/kotapplication/syncrowhite.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(SyncroWindow.class.getResource("/kotapplication/syncrocut.png")));
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

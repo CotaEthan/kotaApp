@@ -73,16 +73,33 @@ public class WinWindow extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JButton btnNewButton_1 = new JButton("Reboot");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_1.setBounds(320, 137, 90, 28);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Specs");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) 
+			{
+				try 
+				{
+					Runtime.getRuntime().exec("systemsettings.exe");
+				} 
+				catch (IOException e1) 
+				{
+					e1.printStackTrace();
+				}			
+			}
+		});
 		btnNewButton_2.setBounds(173, 137, 90, 28);
 		contentPane.add(btnNewButton_2);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setIcon(new ImageIcon(WinWindow.class.getResource("/kotapplication/pc.png")));
-		lblNewLabel_2.setBounds(187, 56, 76, 69);
+		lblNewLabel_2.setBounds(185, 56, 76, 69);
 		contentPane.add(lblNewLabel_2);
 	}
 }

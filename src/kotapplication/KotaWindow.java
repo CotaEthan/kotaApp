@@ -74,7 +74,7 @@ public class KotaWindow extends JFrame {
 		
 		JLabel lblNewLabel_2 = new JLabel("");
 		lblNewLabel_2.setBounds(333, 16, 69, 68);
-		lblNewLabel_2.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/syncrowhite.png")));
+		lblNewLabel_2.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/syncrocut.png")));
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Tools");
@@ -150,7 +150,7 @@ public class KotaWindow extends JFrame {
 		contentPane.add(btnNewButton_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setBounds(43, 133, 69, 69);
+		lblNewLabel_3.setBounds(53, 133, 69, 69);
 		lblNewLabel_3.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/winlight.png")));
 		contentPane.add(lblNewLabel_3);
 		

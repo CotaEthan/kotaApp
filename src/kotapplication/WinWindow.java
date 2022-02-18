@@ -15,6 +15,7 @@ import javax.swing.BoxLayout;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
@@ -44,6 +45,9 @@ public class WinWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		String path = "C:\\KotaAppLog";
+
+		
 		
 		JButton btnNewButton = new JButton("My Files");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -51,7 +55,7 @@ public class WinWindow extends JFrame {
 			{
 				try 
 				{
-					Runtime.getRuntime().exec("explorer.exe /select, path");
+					Runtime.getRuntime().exec("explorer.exe"); // /select, path
 				} 
 				catch (IOException e1) 
 				{
@@ -74,24 +78,44 @@ public class WinWindow extends JFrame {
 		
 		JButton btnNewButton_1 = new JButton("Reboot");
 		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) 
+			{
+			      Runtime runtime = Runtime.getRuntime();
+			      try
+			      {
+			         //System.out.println("Shutting down the PC after 5 seconds.");
+			         runtime.exec("shutdown -s -t 5");
+			      }
+			      catch(IOException e0)
+			      {
+			         System.out.println("Exception: " +e);
+			      }
 			}
 		});
 		btnNewButton_1.setBounds(320, 137, 90, 28);
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("Specs");
-		btnNewButton_2.addActionListener(new ActionListener() {
+		btnNewButton_2.addActionListener(new ActionListener() 
+		{
+			//Create system info log at path destination
 			public void actionPerformed(ActionEvent e) 
-			{
+			{		
 				try 
 				{
-					Runtime.getRuntime().exec("systemsettings.exe");
+					File kotaFolder = new File(path);
+					if(!kotaFolder.exists()) {kotaFolder.mkdir();}
+					
+					ProcessBuilder buildOutput = new ProcessBuilder("systeminfo");
+					buildOutput.redirectOutput(new File("C:\\KotaAppLog\\sysinfo.txt"));
+					buildOutput.redirectError(new File("C:\\KotaAppLog\\sysinfo.txt"));
+					buildOutput.start();
 				} 
 				catch (IOException e1) 
 				{
+					System.out.println("Sys debug err: spec print failed");
 					e1.printStackTrace();
-				}			
+				}	
 			}
 		});
 		btnNewButton_2.setBounds(173, 137, 90, 28);

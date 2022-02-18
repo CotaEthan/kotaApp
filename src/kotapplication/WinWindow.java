@@ -99,7 +99,7 @@ public class WinWindow extends JFrame {
 			//Create system info log at path destination
 			public void actionPerformed(ActionEvent e) 
 			{	
-				KotaLogSystem.testMe("C:\\KotaAppLog", "systeminfo", "C:\\KotaAppLog\\sysinfo.txt");
+				KotaLogSystem.kLog("systeminfo", "C:\\KotaApp\\sysinfo.txt"); //"C:\\KotaApp\\Log", 
 			}
 		});
 		btnNewButton_2.setBounds(173, 137, 90, 28);

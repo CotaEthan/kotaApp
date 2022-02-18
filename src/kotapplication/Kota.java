@@ -2,6 +2,7 @@ package kotapplication;
 
 import java.awt.Dimension;
 import java.awt.EventQueue;
+import java.io.File;
 
 import javax.swing.UIManager;
 
@@ -10,6 +11,7 @@ public class Kota
 
 	public static void main(String[] args) 
 	{
+		//Main Window
 		try 
 		{
 			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
@@ -33,7 +35,9 @@ public class Kota
 				}
 			}
 		});
-
+		//Create required folders, file paths
+		KotaLogSystem.createDir("C:\\KotaApp");
+		KotaLogSystem.createDir("C:\\KotaApp\\Log");
+		KotaLogSystem.createDir("C:\\KotaApp\\etc");
 	}
-
 }

@@ -45,8 +45,6 @@ public class WinWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		String path = "C:\\KotaAppLog";
-
 		
 		
 		JButton btnNewButton = new JButton("My Files");
@@ -100,22 +98,8 @@ public class WinWindow extends JFrame {
 		{
 			//Create system info log at path destination
 			public void actionPerformed(ActionEvent e) 
-			{		
-				try 
-				{
-					File kotaFolder = new File(path);
-					if(!kotaFolder.exists()) {kotaFolder.mkdir();}
-					
-					ProcessBuilder buildOutput = new ProcessBuilder("systeminfo");
-					buildOutput.redirectOutput(new File("C:\\KotaAppLog\\sysinfo.txt"));
-					buildOutput.redirectError(new File("C:\\KotaAppLog\\sysinfo.txt"));
-					buildOutput.start();
-				} 
-				catch (IOException e1) 
-				{
-					System.out.println("Sys debug err: spec print failed");
-					e1.printStackTrace();
-				}	
+			{	
+				KotaLogSystem.testMe("C:\\KotaAppLog", "systeminfo", "C:\\KotaAppLog\\sysinfo.txt");
 			}
 		});
 		btnNewButton_2.setBounds(173, 137, 90, 28);

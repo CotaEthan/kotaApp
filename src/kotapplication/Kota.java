@@ -38,6 +38,6 @@ public class Kota
 		//Create required folders, file paths
 		KotaLogSystem.createDir("C:\\KotaApp");
 		KotaLogSystem.createDir("C:\\KotaApp\\Log");
-		KotaLogSystem.createDir("C:\\KotaApp\\etc");
+		KotaLogSystem.createDir("C:\\KotaApp\\UserData");
 	}
 }

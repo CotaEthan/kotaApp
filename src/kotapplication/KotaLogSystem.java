@@ -6,14 +6,13 @@ import java.io.IOException;
 public class KotaLogSystem 
 {
 	//Usage: Run cmd, cmd output .txt location
-	public static void kLog(String command, String location) //String path, 
+	public static void kLog(String command, String logFile) //String path, 
 	{
 		try 
 		{			
-			//createDir(path);
 			ProcessBuilder buildOutput = new ProcessBuilder(command);
-			buildOutput.redirectOutput(new File(location));
-			buildOutput.redirectError(new File(location));
+			buildOutput.redirectOutput(new File(logFile));
+			buildOutput.redirectError(new File(logFile));
 			buildOutput.start();
 		} 
 		catch (IOException e1) 
@@ -25,15 +24,19 @@ public class KotaLogSystem
 	
 	public static void createDir(String path)
 	{
-		//try
-		//{
 			File kotaFolder = new File(path);
 			if(!kotaFolder.exists()) {kotaFolder.mkdir();}
-		//}
-		//catch (IOException e2)
-		//{
-		//	System.out.println("Folder(s) failed to create properly");
-			//e2.printStackTrace();
-		//}
+	}
+	public static void cmdRun(String arg)
+	{
+	      Runtime runtime = Runtime.getRuntime();
+	      try
+	      {
+	         runtime.exec(arg);
+	      }
+	      catch(IOException e0)
+	      {
+	         System.out.println("Exception: " +e0);
+	      }
 	}
 }

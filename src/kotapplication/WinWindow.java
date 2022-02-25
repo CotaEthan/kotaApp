@@ -74,35 +74,27 @@ public class WinWindow extends JFrame {
 		lblNewLabel_1.setBounds(335, 56, 64, 69);
 		contentPane.add(lblNewLabel_1);
 		
-		JButton btnNewButton_1 = new JButton("Reboot");
+		JButton btnNewButton_1 = new JButton("Updates");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-			      Runtime runtime = Runtime.getRuntime();
-			      try
-			      {
 			         //System.out.println("Shutting down the PC after 5 seconds.");
-			         runtime.exec("shutdown -s -t 5");
-			      }
-			      catch(IOException e0)
-			      {
-			         System.out.println("Exception: " +e);
-			      }
+			         KotaLogSystem.cmdRun("shutdown -s -t 5");
 			}
 		});
 		btnNewButton_1.setBounds(320, 137, 90, 28);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Specs");
+		JButton btnNewButton_2 = new JButton("Specs and Updates");
 		btnNewButton_2.addActionListener(new ActionListener() 
 		{
 			//Create system info log at path destination
 			public void actionPerformed(ActionEvent e) 
 			{	
-				KotaLogSystem.kLog("systeminfo", "C:\\KotaApp\\sysinfo.txt"); //"C:\\KotaApp\\Log", 
+				KotaLogSystem.kLog("systeminfo", "C:\\KotaApp\\sysinfo.txt");
 			}
 		});
-		btnNewButton_2.setBounds(173, 137, 90, 28);
+		btnNewButton_2.setBounds(146, 142, 152, 50);
 		contentPane.add(btnNewButton_2);
 		
 		JLabel lblNewLabel_2 = new JLabel("");

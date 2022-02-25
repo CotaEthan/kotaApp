@@ -8,18 +8,15 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 
-public class ScriptsWindow extends JFrame {
+public class ScriptsWindow extends JFrame 
+{
 
 	private JPanel contentPane;
-
-	/**
-	 * Launch the application.
-	 */
-
 	/**
 	 * Create the frame.
 	 */
-	public ScriptsWindow() {
+	public ScriptsWindow() 
+	{
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ScriptsWindow.class.getResource("/kotapplication/powershell.png")));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

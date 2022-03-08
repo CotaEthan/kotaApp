@@ -39,5 +39,6 @@ public class Kota
 		KotaLogSystem.createDir("C:\\KotaApp");
 		KotaLogSystem.createDir("C:\\KotaApp\\Log");
 		KotaLogSystem.createDir("C:\\KotaApp\\UserData");
+		KotaLogSystem.createDir("C:\\KotaApp\\Scripts");
 	}
 }

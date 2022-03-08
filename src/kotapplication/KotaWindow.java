@@ -48,12 +48,61 @@ public class KotaWindow extends JFrame {
 		menuBar.add(mnNewMenu);
 		
 		JMenuItem mntmNewMenuItem = new JMenuItem("Kota Technology");
+		mntmNewMenuItem.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							KTechWindow frame = new KTechWindow();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem);
 		
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("KotaApp Support");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				EventQueue.invokeLater(new Runnable() 
+				{
+					public void run() {
+						try {
+							SupportWindow frame = new SupportWindow();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem_1);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("About");
+		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e)
+			{
+				EventQueue.invokeLater(new Runnable() 
+				{
+					public void run() {
+						try {
+							AboutWindow frame = new AboutWindow();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
 		mnNewMenu.add(mntmNewMenuItem_2);
 		contentPane = new JPanel();
 		contentPane.setSize(new Dimension(200, 200));

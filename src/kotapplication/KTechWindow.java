@@ -62,7 +62,8 @@ public class KTechWindow extends JFrame
 		contentPane.add(btnNewButton);
 		
 		JTextArea txtrTest = new JTextArea();
-		txtrTest.setText("\\n\\nEmail: Support@kota.tech\\n\\nWebsite: Select logo above");
+		txtrTest.setEditable(false);
+		txtrTest.setText("Phone: (605) 799-1199\n\nEmail: Support@kota.tech\n\nWebsite: Select logo above");
 		txtrTest.setBounds(10, 151, 414, 99);
 		contentPane.add(txtrTest);
 	}

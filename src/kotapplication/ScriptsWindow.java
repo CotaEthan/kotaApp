@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
+import javax.swing.JButton;
 
 public class ScriptsWindow extends JFrame 
 {
@@ -21,23 +22,15 @@ public class ScriptsWindow extends JFrame
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("Folder");
+		btnNewButton.setBounds(49, 156, 90, 28);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("List");
+		btnNewButton_1.setBounds(273, 156, 90, 28);
+		contentPane.add(btnNewButton_1);
 	}
-	//Add command to clean task bar - remove default apps - requested
-	//Sleep commands: 
-	/*
-powercfg /x -hibernate-timeout-ac 0
-
-powercfg /x -hibernate-timeout-dc 0
-
-powercfg /x -disk-timeout-ac 0
-
-powercfg /x -disk-timeout-dc 0
-
-Powercfg /x -standby-timeout-ac 0
-
-powercfg /x -standby-timeout-dc 0
-
-	 */
 }

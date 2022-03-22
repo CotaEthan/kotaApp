@@ -46,16 +46,16 @@ public class ToolWindow extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-			      Runtime runtime = Runtime.getRuntime();
+			      /*Runtime runtime = Runtime.getRuntime();
 			      try
 			      {
 			         //System.out.println("Shutting down the PC after 5 seconds.");
-			         runtime.exec("shutdown -s -t 5");
+			         //runtime.exec("shutdown -s -t 5");
 			      }
 			      catch(IOException e0)
 			      {
 			         System.out.println("Exception: " +e);
-			      }
+			      }*/
 			}
 		});
 		btnNewButton_1.setBounds(320, 137, 90, 28);

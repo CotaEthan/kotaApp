@@ -6,19 +6,21 @@ import java.io.InputStreamReader;
 public class JavaPowerShell
 {
 
-	public static void jpowerShell(String[] args) throws IOException 
+	public static void jpowerShell(String commands) throws IOException 
 	{
 
 		String line;
-
-		String command = "powershell.exe & \"C:\\KotaApp\\Scripts\\INSERTNAMEHEREPLACEHOLDER";
+		
+		
+		String command = "powershell.exe & \"C:\\KotaApp\\Scripts\\"+commands;
 
 		Process powerShellProcess = Runtime.getRuntime().exec(command);
 
 		powerShellProcess.getOutputStream().close();
 
 		BufferedReader stdout = new BufferedReader(new InputStreamReader(powerShellProcess.getInputStream()));
-		while ((line = stdout.readLine()) != null) {
+		while ((line = stdout.readLine()) != null) 
+		{
 			System.out.println("Output: " + line);
 
 		}
@@ -26,12 +28,12 @@ public class JavaPowerShell
 		stdout.close();
 
 		BufferedReader stderr = new BufferedReader(new InputStreamReader(powerShellProcess.getErrorStream()));
-		while ((line = stderr.readLine()) != null) {
+		while ((line = stderr.readLine()) != null) 
+		{
 			System.out.println("Output: " + line);
 		}
 		stderr.close();
 
 	}
 
-}
-    
+}  

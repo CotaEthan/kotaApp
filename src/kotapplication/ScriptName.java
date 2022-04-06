@@ -21,6 +21,8 @@ public class ScriptName extends JFrame
 	private JPanel contentPane;
 	private JTextField textFileName;
 	private JTextField textFileType;
+	private String fileName;
+	private String fileType;
 	/**
 	 * Create the frame for adding new to list.
 	 */
@@ -37,7 +39,25 @@ public class ScriptName extends JFrame
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
+				fileName = textFileName.getText();
+				fileType = textFileType.getText();
 				
+				setBounds(50, 50, 450, 300);
+				contentPane = new JPanel();
+				//contentPane.setBackground(SystemColor.inactiveCaption);
+				contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+				setContentPane(contentPane);
+				contentPane.setLayout(null);
+				
+				JTextPane txtpn = new JTextPane();
+				txtpn.setFont(new Font("Times New Roman", Font.BOLD, 11));
+				txtpn.setEditable(false);
+				//txtpnTemp.setBackground(SystemColor.inactiveCaption);
+				txtpn.setText(fileName + "." + fileType + " added");
+				txtpn.setBounds(10, 11, 100, 100);
+				contentPane.add(txtpn);
+
+				System.out.println(fileName + "." + fileType + " added");
 			}
 		});
 		btnNewButton.setBounds(162, 176, 89, 23);
@@ -65,30 +85,11 @@ public class ScriptName extends JFrame
 		lblNewLabel_2.setBounds(236, 34, 46, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		/*btnNewButton.addActionListener(new ActionListener() 
-		{
-			public void actionPerformed(ActionEvent e) 
-			{
-				String phoneNumber = textField.getText();
-				String message = textArea.getText();
-				
-				setBounds(100, 100, 450, 300);
-				contentPane = new JPanel();
-				contentPane.setBackground(SystemColor.inactiveCaption);
-				contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-				setContentPane(contentPane);
-				contentPane.setLayout(null);
-				
-				JTextPane txtpnTemp = new JTextPane();
-				txtpnTemp.setFont(new Font("Times New Roman", Font.BOLD, 11));
-				txtpnTemp.setEditable(false);
-				txtpnTemp.setBackground(SystemColor.inactiveCaption);
-				txtpnTemp.setText("Sent to: \n" + phoneNumber + "\n\n\nMessage Sent: "+ message);
-				txtpnTemp.setBounds(10, 11, 250, 300);
-				contentPane.add(txtpnTemp);
-
-				System.out.println(phoneNumber + "  " + message);
-			}
-		});*/
+	}
+	
+	//Add to proper data struct to be listed at later time
+	public void saveSystem(String name)
+	{
+		System.out.println("Cloud print test for working method");
 	}
 }

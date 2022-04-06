@@ -1,6 +1,6 @@
 # kotaApp
 KotaApp application for https://www.kota.tech/
-Ver. 0.0.13
+Ver. 0.0.15
 
 Requirements: Java SDK environment to run Jar file.
 Usage: Load software onto computer. Double Click to run.

@@ -9,6 +9,7 @@ import javax.swing.border.EmptyBorder;
 import java.awt.Toolkit;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
@@ -34,7 +35,14 @@ public class ScriptsWindow extends JFrame
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				
+				try 
+				{
+					Runtime.getRuntime().exec("explorer.exe C:\\KotaApp\\Scripts"); // /select, path
+				} 
+				catch (IOException e1) 
+				{
+					e1.printStackTrace();
+				}
 			}
 		});
 		btnNewButton.setBounds(32, 156, 90, 28);
@@ -45,8 +53,21 @@ public class ScriptsWindow extends JFrame
 		contentPane.add(btnNewButton_1);
 		
 		JButton btnNewButton_2 = new JButton("New");
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnNewButton_2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				EventQueue.invokeLater(new Runnable() 
+				{
+					public void run() {
+						try {
+							ScriptName frame = new ScriptName();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
 			}
 		});
 		btnNewButton_2.setBounds(167, 156, 90, 28);
@@ -58,12 +79,13 @@ public class ScriptsWindow extends JFrame
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/save.png")));
-		lblNewLabel_1.setBounds(167, 75, 78, 68);
+		lblNewLabel_1.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/saveSize.png")));
+		lblNewLabel_1.setBounds(176, 75, 69, 69);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("New label");
-		lblNewLabel_2.setBounds(315, 103, 55, 16);
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/list.png")));
+		lblNewLabel_2.setBounds(306, 75, 69, 69);
 		contentPane.add(lblNewLabel_2);
 	}
 }

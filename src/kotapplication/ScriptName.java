@@ -11,41 +11,59 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextPane;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
 
 public class ScriptName extends JFrame 
 {
 
 	private JPanel contentPane;
-
+	private JTextField textFileName;
+	private JTextField textFileType;
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) 
-	{
-		EventQueue.invokeLater(new Runnable() 
-		{
-			public void run() {
-				try {
-					ScriptName frame = new ScriptName();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
-	 * Create the frame.
+	 * Create the frame for adding new to list.
 	 */
 	public ScriptName() 
 	{
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("Save");
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				
+			}
+		});
+		btnNewButton.setBounds(162, 176, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		textFileName = new JTextField();
+		textFileName.setBounds(25, 59, 191, 20);
+		contentPane.add(textFileName);
+		textFileName.setColumns(10);
+		
+		textFileType = new JTextField();
+		textFileType.setBounds(236, 59, 110, 20);
+		contentPane.add(textFileType);
+		textFileType.setColumns(10);
+		
+		JLabel lblNewLabel = new JLabel(".");
+		lblNewLabel.setBounds(226, 62, 25, 14);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("File Name");
+		lblNewLabel_1.setBounds(25, 34, 46, 14);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("File Type");
+		lblNewLabel_2.setBounds(236, 34, 46, 14);
+		contentPane.add(lblNewLabel_2);
 		
 		/*btnNewButton.addActionListener(new ActionListener() 
 		{
@@ -73,5 +91,4 @@ public class ScriptName extends JFrame
 			}
 		});*/
 	}
-
 }

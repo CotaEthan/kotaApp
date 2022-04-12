@@ -117,8 +117,8 @@ public class KotaWindow extends JFrame {
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setBounds(333, 16, 69, 68);
-		lblNewLabel_2.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/syncrocut.png")));
+		lblNewLabel_2.setBounds(329, 21, 69, 68);
+		lblNewLabel_2.setIcon(new ImageIcon(KotaWindow.class.getResource("/kotapplication/Datto.png")));
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Tools");
@@ -169,7 +169,7 @@ public class KotaWindow extends JFrame {
 		btnNewButton_1.setBounds(191, 93, 66, 28);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Syncro");
+		JButton btnNewButton_2 = new JButton("Datto");
 		btnNewButton_2.setBounds(333, 93, 65, 28);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e)
@@ -182,7 +182,7 @@ public class KotaWindow extends JFrame {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							SyncroWindow frame = new SyncroWindow();
+							DattoWindow frame = new DattoWindow();
 							frame.setVisible(true);
 						} catch (Exception e) {
 							e.printStackTrace();

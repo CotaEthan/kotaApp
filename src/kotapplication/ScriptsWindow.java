@@ -24,20 +24,65 @@ public class ScriptsWindow extends JFrame
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 	}
-	//Add command to clean task bar - remove default apps - requested
-	//Sleep commands: 
-	/*
-powercfg /x -hibernate-timeout-ac 0
-
-powercfg /x -hibernate-timeout-dc 0
-
-powercfg /x -disk-timeout-ac 0
-
-powercfg /x -disk-timeout-dc 0
-
-Powercfg /x -standby-timeout-ac 0
-
-powercfg /x -standby-timeout-dc 0
-
-	 */
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JButton btnNewButton = new JButton("Folder");
+		btnNewButton.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				try 
+				{
+					Runtime.getRuntime().exec("explorer.exe C:\\KotaApp\\Scripts"); // /select, path
+				} 
+				catch (IOException e1) 
+				{
+					e1.printStackTrace();
+				}
+			}
+		});
+		btnNewButton.setBounds(32, 156, 90, 28);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("List");
+		btnNewButton_1.setBounds(298, 156, 90, 28);
+		contentPane.add(btnNewButton_1);
+		
+		JButton btnNewButton_2 = new JButton("New");
+		btnNewButton_2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				EventQueue.invokeLater(new Runnable() 
+				{
+					public void run() {
+						try {
+							ScriptName frame = new ScriptName();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
+		btnNewButton_2.setBounds(167, 156, 90, 28);
+		contentPane.add(btnNewButton_2);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/files.png")));
+		lblNewLabel.setBounds(42, 75, 69, 69);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblNewLabel_1 = new JLabel("");
+		lblNewLabel_1.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/saveSize.png")));
+		lblNewLabel_1.setBounds(176, 75, 69, 69);
+		contentPane.add(lblNewLabel_1);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/list.png")));
+		lblNewLabel_2.setBounds(306, 75, 69, 69);
+		contentPane.add(lblNewLabel_2);
+	}
 }

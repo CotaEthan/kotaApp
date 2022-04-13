@@ -52,7 +52,10 @@ public class ToolWindow extends JFrame {
 			  {
 				 runtime.exec("shutdown -s -t 5");
 			  }
-
+			  catch(IOException e1)
+			  {
+				  System.out.println("Reboot failure, Exception: " +e1);
+			  }
 			}
 		});
 		btnNewButton_1.setBounds(320, 137, 90, 28);

@@ -46,11 +46,13 @@ public class ToolWindow extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
+
 			  Runtime runtime = Runtime.getRuntime();
 			  try
 			  {
 				 runtime.exec("shutdown -s -t 5");
 			  }
+
 			}
 		});
 		btnNewButton_1.setBounds(320, 137, 90, 28);

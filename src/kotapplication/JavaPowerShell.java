@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 public class JavaPowerShell
 {
 
+	//Method to call script from Path: C:\\KotaApp\\Scripts\\ -- Created at runtime
 	public static void jpowerShell(String commands) throws IOException 
 	{
 

@@ -21,7 +21,9 @@ public class ToolWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ToolWindow() {
+	public ToolWindow() 
+	{
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ToolWindow.class.getResource("/kotapplication/tools.png")));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

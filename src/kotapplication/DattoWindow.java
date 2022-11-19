@@ -26,7 +26,9 @@ public class DattoWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public DattoWindow() {
+	public DattoWindow() 
+	{
+		setResizable(false);
 		setBackground(Color.WHITE);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(DattoWindow.class.getResource("/kotapplication/Datto.png")));
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

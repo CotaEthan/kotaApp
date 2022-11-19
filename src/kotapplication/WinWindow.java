@@ -25,21 +25,12 @@ public class WinWindow extends JFrame {
 	private JPanel contentPane;
 
 	/**
-	 * Launch the application.
-	 */
-	/*public static void main(String[] args) 
-	{
-
-	}*/
-
-	/**
 	 * Create the frame.
 	 */
 	public WinWindow() {
 		setSize(new Dimension(200, 200));
 		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(WinWindow.class.getResource("/kotapplication/winlight.png")));
-		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -48,7 +39,8 @@ public class WinWindow extends JFrame {
 		
 		
 		JButton btnNewButton = new JButton("My Files");
-		btnNewButton.addActionListener(new ActionListener() {
+		btnNewButton.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				try 
@@ -85,7 +77,7 @@ public class WinWindow extends JFrame {
 		btnNewButton_1.setBounds(320, 137, 90, 28);
 		contentPane.add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Specs and Updates");
+		JButton btnNewButton_2 = new JButton("Specifications");
 		btnNewButton_2.addActionListener(new ActionListener() 
 		{
 			//Create system info log at path destination

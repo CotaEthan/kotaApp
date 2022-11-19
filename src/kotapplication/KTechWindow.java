@@ -29,6 +29,7 @@ public class KTechWindow extends JFrame
 	 */
 	public KTechWindow() 
 	{
+		setResizable(false);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.text);

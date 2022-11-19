@@ -23,6 +23,7 @@ public class ScriptsWindow extends JFrame
 	 */
 	public ScriptsWindow() 
 	{
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ScriptsWindow.class.getResource("/kotapplication/powershell.png")));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -30,6 +31,7 @@ public class ScriptsWindow extends JFrame
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		//Folder function, button, icon
 		JButton btnNewButton = new JButton("Folder");
 		btnNewButton.addActionListener(new ActionListener() 
 		{
@@ -48,10 +50,22 @@ public class ScriptsWindow extends JFrame
 		btnNewButton.setBounds(32, 156, 90, 28);
 		contentPane.add(btnNewButton);
 		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/files.png")));
+		lblNewLabel.setBounds(42, 75, 69, 69);
+		contentPane.add(lblNewLabel);
+		
+		//List of scripts function, button, icon
 		JButton btnNewButton_1 = new JButton("List");
 		btnNewButton_1.setBounds(298, 156, 90, 28);
 		contentPane.add(btnNewButton_1);
 		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/list.png")));
+		lblNewLabel_2.setBounds(306, 75, 69, 69);
+		contentPane.add(lblNewLabel_2);
+		
+		//Add new function, button, icon
 		JButton btnNewButton_2 = new JButton("New");
 		btnNewButton_2.addActionListener(new ActionListener() 
 		{
@@ -73,19 +87,10 @@ public class ScriptsWindow extends JFrame
 		btnNewButton_2.setBounds(167, 156, 90, 28);
 		contentPane.add(btnNewButton_2);
 		
-		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/files.png")));
-		lblNewLabel.setBounds(42, 75, 69, 69);
-		contentPane.add(lblNewLabel);
-		
 		JLabel lblNewLabel_1 = new JLabel("");
 		lblNewLabel_1.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/saveSize.png")));
 		lblNewLabel_1.setBounds(176, 75, 69, 69);
 		contentPane.add(lblNewLabel_1);
 		
-		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon(ScriptsWindow.class.getResource("/kotapplication/list.png")));
-		lblNewLabel_2.setBounds(306, 75, 69, 69);
-		contentPane.add(lblNewLabel_2);
 	}
 }

@@ -28,6 +28,7 @@ public class ScriptName extends JFrame
 	 */
 	public ScriptName() 
 	{
+		setResizable(false);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -78,11 +79,11 @@ public class ScriptName extends JFrame
 		contentPane.add(lblNewLabel);
 		
 		JLabel lblNewLabel_1 = new JLabel("File Name");
-		lblNewLabel_1.setBounds(25, 34, 46, 14);
+		lblNewLabel_1.setBounds(25, 34, 191, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		JLabel lblNewLabel_2 = new JLabel("File Type");
-		lblNewLabel_2.setBounds(236, 34, 46, 14);
+		lblNewLabel_2.setBounds(236, 34, 110, 14);
 		contentPane.add(lblNewLabel_2);
 		
 	}

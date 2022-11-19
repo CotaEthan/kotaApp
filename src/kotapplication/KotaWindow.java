@@ -28,7 +28,8 @@ public class KotaWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public KotaWindow() {
+	public KotaWindow() 
+	{
 		setPreferredSize(new Dimension(200, 200));
 		setSize(new Dimension(200, 200));
 		setResizable(false);
@@ -87,7 +88,8 @@ public class KotaWindow extends JFrame {
 		mnNewMenu.add(mntmNewMenuItem_1);
 		
 		JMenuItem mntmNewMenuItem_2 = new JMenuItem("About");
-		mntmNewMenuItem_2.addActionListener(new ActionListener() {
+		mntmNewMenuItem_2.addActionListener(new ActionListener()
+		{
 			public void actionPerformed(ActionEvent e)
 			{
 				EventQueue.invokeLater(new Runnable() 
@@ -122,7 +124,8 @@ public class KotaWindow extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JButton btnNewButton = new JButton("Tools");
-		btnNewButton.addActionListener(new ActionListener() {
+		btnNewButton.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				try {
@@ -146,7 +149,8 @@ public class KotaWindow extends JFrame {
 		contentPane.add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Scripts");
-		btnNewButton_1.addActionListener(new ActionListener() {
+		btnNewButton_1.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e) 
 			{
 				try {
@@ -171,7 +175,8 @@ public class KotaWindow extends JFrame {
 		
 		JButton btnNewButton_2 = new JButton("Datto");
 		btnNewButton_2.setBounds(333, 93, 65, 28);
-		btnNewButton_2.addActionListener(new ActionListener() {
+		btnNewButton_2.addActionListener(new ActionListener() 
+		{
 			public void actionPerformed(ActionEvent e)
 			{
 				try {

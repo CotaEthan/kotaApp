@@ -30,6 +30,7 @@ public class KotaWindow extends JFrame {
 	 */
 	public KotaWindow() 
 	{
+		setVisible(true);
 		setPreferredSize(new Dimension(200, 200));
 		setSize(new Dimension(200, 200));
 		setResizable(false);

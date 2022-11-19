@@ -15,7 +15,9 @@ public class SoftWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SoftWindow() {
+	public SoftWindow() 
+	{
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(SoftWindow.class.getResource("/kotapplication/softare.png")));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

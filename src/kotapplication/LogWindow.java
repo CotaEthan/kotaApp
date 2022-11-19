@@ -24,6 +24,7 @@ public class LogWindow extends JFrame {
 	 */
 	public LogWindow() 
 	{
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(LogWindow.class.getResource("/kotapplication/log.png")));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();

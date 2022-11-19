@@ -21,7 +21,9 @@ public class ToolWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ToolWindow() {
+	public ToolWindow() 
+	{
+		setResizable(false);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(ToolWindow.class.getResource("/kotapplication/tools.png")));
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -46,16 +48,16 @@ public class ToolWindow extends JFrame {
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) 
 			{
-			      Runtime runtime = Runtime.getRuntime();
-			      try
-			      {
-			         //System.out.println("Shutting down the PC after 5 seconds.");
-			         runtime.exec("shutdown -s -t 5");
-			      }
-			      catch(IOException e0)
-			      {
-			         System.out.println("Exception: " +e);
-			      }
+
+			  Runtime runtime = Runtime.getRuntime();
+			  try
+			  {
+				 runtime.exec("shutdown -s -t 5");
+			  }
+			  catch(IOException e1)
+			  {
+				  System.out.println("Reboot failure, Exception: " +e1);
+			  }
 			}
 		});
 		btnNewButton_1.setBounds(320, 137, 90, 28);

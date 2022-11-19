@@ -1,6 +1,7 @@
 package kotapplication;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.EventQueue;
 
@@ -25,7 +26,10 @@ public class DattoWindow extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public DattoWindow() {
+	public DattoWindow() 
+	{
+		setResizable(false);
+		setBackground(Color.WHITE);
 		setIconImage(Toolkit.getDefaultToolkit().getImage(DattoWindow.class.getResource("/kotapplication/Datto.png")));
 		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
@@ -33,6 +37,7 @@ public class DattoWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		contentPane.setBackground(new Color(33, 66, 123));
 		
 		JButton btnNewButton = new JButton("");
 		btnNewButton.addActionListener(new ActionListener() 
@@ -60,6 +65,29 @@ public class DattoWindow extends JFrame {
 		btnNewButton.setIcon(new ImageIcon(DattoWindow.class.getResource("/kotapplication/KotaCommerce.png")));
 		btnNewButton.setBounds(141, 54, 140, 15);
 		contentPane.add(btnNewButton);
-	}
+		
+		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
+				try 
+				{
+					Desktop.getDesktop().browse(new URI("https://kota.itclientportal.com/"));
+				} 
+				catch (IOException e1) 
+				{
 
+					e1.printStackTrace();
+				} 
+				catch (URISyntaxException e1) 
+				{
+					e1.printStackTrace();
+				} 
+			}
+		});
+		btnNewButton_1.setIcon(new ImageIcon(DattoWindow.class.getResource("/kotapplication/clientPortal.png")));
+		btnNewButton_1.setBounds(141, 108, 140, 33);
+		contentPane.add(btnNewButton_1);
+	}
 }

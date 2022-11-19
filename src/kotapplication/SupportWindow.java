@@ -24,6 +24,7 @@ public class SupportWindow extends JFrame
 	 */
 	public SupportWindow() 
 	{
+		setResizable(false);
  		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.inactiveCaption);
@@ -53,7 +54,7 @@ public class SupportWindow extends JFrame
 				txtpnTemp.setFont(new Font("Times New Roman", Font.BOLD, 11));
 				txtpnTemp.setEditable(false);
 				txtpnTemp.setBackground(SystemColor.inactiveCaption);
-				txtpnTemp.setText("Call/Text: (512) 636-7670");
+				txtpnTemp.setText("Contact: (512) 636-7670");
 				txtpnTemp.setBounds(141, 11, 146, 37);
 				contentPane.add(txtpnTemp);
 			}

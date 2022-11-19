@@ -12,12 +12,12 @@ public class AboutWindow extends JFrame
 {
 
 	private JPanel contentPane;
-
 	/**
 	 * Create the frame.
 	 */
 	public AboutWindow() 
 	{
+		setResizable(false);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBackground(SystemColor.inactiveCaption);
@@ -28,7 +28,7 @@ public class AboutWindow extends JFrame
 		JTextArea txtrTest = new JTextArea();
 		txtrTest.setEditable(false);
 		txtrTest.setBackground(SystemColor.inactiveCaption);
-		txtrTest.setText("Version 0.0.12\n\n\n\nCreated by Ethan Cota");
+		txtrTest.setText("Version 0.0.16\n\n\n\nCreated by Ethan Cota");
 		txtrTest.setBounds(10, 11, 414, 239);
 		contentPane.add(txtrTest);
 	}
